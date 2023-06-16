@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza</title>
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/281/PNG/256/Pizza-icon_30282.png">
+</head>
+<body style="background-image: url(https://media.istockphoto.com/id/943449226/es/foto/concepto-promocional-flyer-y-cartel-para-restaurantes-o-pizzer%C3%ADas-plantilla-con-pizza-de.jpg?s=612x612&w=0&k=20&c=SKTA42IP3L-MSEgHIAFx9JBZMJ4V_695Ba1vDTk8hsk=);
+ background-repeat: no-repeat; background-size: cover;">
+    <h1 style="font-size: 50px; text-align: center; color: white">Pizzas</h1>
+    <h3 style="font-size: 20px; color: white;">Hola, {{nombre}}</h3>
+    <h4 style="font-size: 20px; color: white;">Este es tu menú</h4>
+    <ul style="color: white">
+        {% for pizza in pizzas %}
+            {% for ingrediente in ingredientes %}
+            <li>Pizza: {{pizza.nombre}} de {{ingrediente.nombre}} ({{ingrediente.categoria}})<p>Precio: {{pizza.precio}} Guaraníes
+                <p>Activo: {{pizza.activo}}</p>
+            </li><br>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</body>
+</html>
